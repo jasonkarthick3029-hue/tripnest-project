@@ -1,0 +1,57 @@
+<!-- ============ BOOKING / TICKET MODAL ============ -->
+<div id="bookModal" class="modal hidden">
+  <div class="modal-box booking-modal-box">
+    <button class="modal-close" id="closeBookModal" aria-label="Close">&times;</button>
+
+    <div id="bookingEntryView">
+      <div class="flow-kicker">TRIPNEST · SECURE CHECKOUT</div>
+      <h3>Confirm your journey</h3>
+      <p id="bookSummary" class="book-summary"></p>
+
+      <div class="checkout-trust">
+        <span>✓ Secure booking</span>
+        <span>✓ Instant confirmation</span>
+        <span>✓ Manage anytime</span>
+      </div>
+
+      <form id="bookForm" class="modal-form">
+        <label class="checkout-field">
+          <span>Passenger / guest name</span>
+          <input type="text" name="passenger_name" placeholder="Enter full name" required>
+        </label>
+        <button type="submit" class="btn-primary checkout-button">
+          <span>Confirm &amp; Book</span><b>→</b>
+        </button>
+        <p class="form-msg" id="bookMsg"></p>
+      </form>
+    </div>
+
+    <div id="bookingSuccessView" class="hidden">
+      <div class="ticket-success-head">
+        <div class="success-check">✓</div>
+        <div>
+          <div class="flow-kicker">TRIPNEST · BOOKING CONFIRMED</div>
+          <h3>You're all set!</h3>
+          <p>Your journey has been booked successfully.</p>
+        </div>
+      </div>
+
+      <div class="ticket-card" id="ticketCard">
+        <div class="ticket-brand"><span>✈</span> Trip<span>Nest</span><small>TRAVEL PASS</small></div>
+        <div class="ticket-route" id="ticketRoute"></div>
+        <div class="ticket-meta-grid">
+          <div><small>Booking ID</small><strong id="ticketRef">—</strong></div>
+          <div><small>Passenger</small><strong id="ticketPassenger">—</strong></div>
+          <div><small>Date</small><strong id="ticketDate">—</strong></div>
+          <div><small>Total</small><strong id="ticketPrice">—</strong></div>
+        </div>
+        <div class="ticket-footer"><span>● CONFIRMED</span><span>Keep this reference for check-in</span></div>
+      </div>
+
+      <div class="ticket-actions">
+        <button type="button" id="ticketDoneBtn" class="btn-primary">Done</button>
+        <button type="button" id="ticketBookingsBtn" class="btn-outline ticket-secondary">View My Bookings</button>
+      </div>
+    </div>
+  </div>
+</div>

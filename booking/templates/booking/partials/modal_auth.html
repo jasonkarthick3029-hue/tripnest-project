@@ -1,0 +1,26 @@
+<!-- ============ AUTH MODAL ============ -->
+<div id="authModal" class="modal hidden">
+  <div class="modal-box">
+    <button class="modal-close" id="closeAuthModal">&times;</button>
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-mtab="login">Login</button>
+      <button class="modal-tab" data-mtab="signup">Sign up</button>
+    </div>
+
+    <form id="loginForm" class="modal-form">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit" class="btn-primary">Login</button>
+      <p class="form-msg" id="loginMsg"></p>
+    </form>
+
+    <form id="signupForm" class="modal-form hidden">
+      <input type="text" name="name" placeholder="Full name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone number">
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit" class="btn-primary">Create account</button>
+      <p class="form-msg" id="signupMsg"></p>
+    </form>
+  </div>
+</div>

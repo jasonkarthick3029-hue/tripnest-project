@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TripNest — Flights, Hotels & Buses</title>
+<link rel="stylesheet" href="{% static 'booking/css/style.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+{% csrf_token %}
+
+{% include "booking/partials/header.html" %}
+{% include "booking/partials/hero.html" %}
+{% include "booking/partials/deals.html" %}
+{% include "booking/partials/results.html" %}
+{% include "booking/partials/modal_auth.html" %}
+{% include "booking/partials/modal_booking.html" %}
+{% include "booking/partials/modal_bookings.html" %}
+{% include "booking/partials/modal_info.html" %}
+
+<div id="logoutScreen" class="logout-screen hidden" aria-live="polite">
+  <div class="logout-card">
+    <div class="logout-icon">✓</div>
+    <div class="logout-kicker">TRIPNEST · SESSION COMPLETE</div>
+    <h2>Until the next journey.</h2>
+    <p>Your account has been safely signed out. The world is still waiting — come back when you are ready to explore.</p>
+    <div class="logout-progress"><span></span></div>
+  </div>
+</div>
+
+<footer class="footer" id="siteFooter">
+  <p>TripNest — a demo travel booking site built with Django &amp; MySQL.</p>
+</footer>
+
+<script src="{% static 'booking/js/script.js' %}"></script>
+</body>
+</html>

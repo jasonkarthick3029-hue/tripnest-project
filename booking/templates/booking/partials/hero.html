@@ -1,0 +1,34 @@
+<!-- ============ HERO / SEARCH ============ -->
+<section class="hero" id="heroSection">
+  <div class="hero-slides">
+    <div class="hero-slide active hero-slide-globe"></div>
+    <div class="hero-slide hero-slide-domes"></div>
+    <div class="hero-slide hero-slide-arch"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <div class="hero-service-badge" id="heroServiceBadge">FLIGHTS · HOTELS · BUSES</div>
+    <h1>Explore the world with TripNest</h1>
+    <p>Flights, hotels and buses — all in one place.</p>
+
+    <div class="search-card">
+      <div class="trip-tabs">
+        <button class="trip-tab active" data-trip="schedule">Schedule Your Trip</button>
+        <button class="trip-tab" data-trip="manage">Manage Booking</button>
+        <button class="trip-tab" data-trip="checkin">Check-in</button>
+        <button class="trip-tab" data-trip="status">Flight Status</button>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="flights">✈ Flights</button>
+        <button class="tab" data-tab="hotels">🏨 Hotels</button>
+        <button class="tab" data-tab="buses">🚌 Buses</button>
+      </div>
+
+      {% include "booking/partials/search_flights.html" %}
+      {% include "booking/partials/search_hotels.html" %}
+      {% include "booking/partials/search_buses.html" %}
+    </div>
+  </div>
+</section>
